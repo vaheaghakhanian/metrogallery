@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.ramonapp.pixabay.presentation.imagedetail.ImageDetailFragment">
+
+
+<com.ramonapp.pixabay.component.GeneralToolbar
+        android:id="@+id/detailToolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:searchIsActive="false"
+        app:toolbarTitle="@string/app_name" />
+
+    <ImageView
+        android:id="@+id/largeImageImg"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:contentDescription="@string/large_image"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/detailToolbar"
+        tools:src="@mipmap/ic_launcher" />
+
+    <View
+        android:id="@+id/background"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:alpha="0.6"
+        android:background="@color/black"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="@id/userTxt" />
+
+    <TextView
+        android:id="@+id/likeTxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/commentTxt"
+        app:layout_constraintHorizontal_chainStyle="spread_inside"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:text="Likes:" />
+
+    <TextView
+        android:id="@+id/commentTxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/downloadTxt"
+        app:layout_constraintStart_toEndOf="@id/likeTxt"
+        tools:text="Comments:" />
+
+    <TextView
+        android:id="@+id/downloadTxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/commentTxt"
+        tools:text="Downloads:" />
+
+    <TextView
+        android:id="@+id/tagsTxt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintBottom_toTopOf="@id/likeTxt"
+        tools:text="Tags:" />
+
+    <TextView
+        android:id="@+id/userTxt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginBottom="8dp"
+        android:paddingTop="16dp"
+        app:layout_constraintBottom_toTopOf="@id/tagsTxt"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:text="User:" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="?actionBarSize"
+    android:clickable="true"
+    android:background="@color/black">
+
+    <EditText
+        android:id="@+id/toolbarSearchEdt"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:gravity="center_vertical"
+        android:hint="@string/search"
+        android:inputType="text"
+        android:maxLines="1"
+        android:paddingStart="16dp"
+        android:paddingEnd="32dp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toEndOf="@id/toolbarBackBtn"
+        app:layout_constraintEnd_toEndOf="parent"
+        tools:visibility="visible" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/toolbarClearBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="32dp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_clear"
+        tools:visibility="visible" />
+
+    <TextView
+        android:id="@+id/toolbarTitleTxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toTopOf="@id/toolbarSubTitleTxt"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_chainStyle="packed"
+        tools:text="Title" />
+
+    <TextView
+        android:id="@+id/toolbarSubTitleTxt"
+        android:layout_width="wrap_content"
+        android:layout_height="?attr/actionBarSize"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/toolbarTitleTxt"
+        tools:text="Subtitle" />
+
+    <androidx.appcompat.widget.AppCompatImageButton
+        android:id="@+id/toolbarBackBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="?attr/actionBarSize"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        android:padding="16dp"
+        android:rotation="180"
+        android:scaleType="fitCenter"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_back" />
+
+    <androidx.appcompat.widget.AppCompatImageButton
+        android:id="@+id/toolbarPopUpBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="?attr/actionBarSize"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        android:padding="24dp"
+        android:scaleType="fitCenter"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@+id/toolbarBackBtn"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/toolbarBackBtn"
+         />
+
+    <androidx.appcompat.widget.AppCompatImageButton
+        android:id="@+id/toolbarAction1Btn"
+        android:layout_width="wrap_content"
+        android:layout_height="?attr/actionBarSize"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        android:padding="16dp"
+        android:scaleType="fitCenter"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@+id/toolbarBackBtn"
+        app:layout_constraintEnd_toStartOf="@id/toolbarPopUpBtn"
+        app:layout_constraintTop_toTopOf="@+id/toolbarBackBtn"
+        tools:srcCompat="@drawable/ic_clear" />
+
+    <androidx.appcompat.widget.AppCompatImageButton
+        android:id="@+id/toolbarAction2Btn"
+        android:layout_width="wrap_content"
+        android:layout_height="?attr/actionBarSize"
+        android:layout_marginEnd="4dp"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        android:padding="24dp"
+        android:scaleType="fitCenter"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@+id/toolbarBackBtn"
+        app:layout_constraintEnd_toStartOf="@id/toolbarAction1Btn"
+        app:layout_constraintTop_toTopOf="@+id/toolbarBackBtn"
+         />
+</androidx.constraintlayout.widget.ConstraintLayout>

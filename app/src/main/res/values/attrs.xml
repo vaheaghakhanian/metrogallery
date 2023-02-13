@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <declare-styleable name="GeneralToolbar">
+        <attr name="hideBackButton" format="boolean"/>
+        <attr name="showCloseButton" format="boolean"/>
+        <attr name="popUpMenuItems" format="reference"/>
+        <attr name="action1Icon" format="reference"/>
+        <attr name="action2Icon" format="reference"/>
+        <attr name="toolbarTitle" format="string"/>
+        <attr name="subTitle" format="string"/>
+        <attr name="searchIsActive" format="boolean"/>
+    </declare-styleable>
+
+</resources>
