@@ -6,7 +6,7 @@ plugins {
 }
 
 android {
-    namespace 'com.ramonapp.pixabay.data'
+    namespace 'com.ramonapp.metgallery.data'
     compileSdk 32
 
     defaultConfig {
@@ -20,11 +20,9 @@ android {
     buildTypes {
         debug {
             buildConfigField 'String', 'API_URL', "\"$rootProject.ext.remoteApiUrl\""
-            buildConfigField 'String', 'API_KEY', "\"$rootProject.ext.remoteApiKey\""
         }
         release {
             buildConfigField 'String', 'API_URL', "\"$rootProject.ext.remoteApiUrl\""
-            buildConfigField 'String', 'API_KEY', "\"$rootProject.ext.remoteApiKey\""
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
@@ -42,15 +40,14 @@ dependencies {
     implementation 'androidx.core:core-ktx:1.7.0'
     implementation 'androidx.appcompat:appcompat:1.5.1'
     implementation 'com.google.android.material:material:1.7.0'
-    implementation project(path: ':domain')
     testImplementation 'junit:junit:4.13.2'
     androidTestImplementation 'androidx.test.ext:junit:1.1.3'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.4.0'
+
+    implementation project(path: ':domain')
     implementation "com.squareup.retrofit2:retrofit:$versions.retrofit"
     implementation "com.squareup.retrofit2:converter-gson:$versions.retrofit"
     implementation "com.google.dagger:hilt-android:$versions.hilt"
     kapt "com.google.dagger:hilt-android-compiler:$versions.hilt"
-    implementation "androidx.room:room-runtime:$versions.room"
-    implementation "androidx.room:room-ktx:$versions.room"
-    kapt "androidx.room:room-compiler:$versions.room"
+
 }

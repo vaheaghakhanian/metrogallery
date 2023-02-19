@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools">
 
     <application
-        android:name="com.ramonapp.pixabay.App"
+        android:name="com.ramonapp.metgallery.App"
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
         android:fullBackupContent="@xml/backup_rules"
@@ -11,10 +11,10 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.Pixabay"
+        android:theme="@style/Theme.MetGallery"
         tools:targetApi="31">
         <activity
-            android:name="com.ramonapp.pixabay.presentation.MainActivity"
+            android:name="com.ramonapp.metgallery.presentation.MainActivity"
             android:windowSoftInputMode="adjustResize"
             android:exported="true">
             <intent-filter>

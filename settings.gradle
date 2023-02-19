@@ -18,7 +18,7 @@ dependencyResolutionManagement {
         }
     }
 }
-rootProject.name = "pixabay"
+rootProject.name = "metgallery"
 include ':app'
 include ':domain'
 include ':data'

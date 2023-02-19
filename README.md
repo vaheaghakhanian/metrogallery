@@ -1,15 +1,14 @@
-# A sample app to show PIXABAY image
+# A sample app to show gallery of the Metropolitan Museum of Art
 
-This is a sample app that is use Pixabay api to show image list and image detail.
+This is a sample app that is use 'https://metmuseum.github.io/' api to search object list and object detail.
 
 ## About Application
 
 I use Kotlin programming language to write classes and xml as a view resource.
-It a modular application so There are 3 modules to implement a clean architecture. App is a presentation layer and also there are Domain and Data layer.
+It is a modular application so There are 3 modules to implement a clean architecture. App is a presentation layer and also there are Domain and Data layer.
 I use Hilt for dependency injection and Coroutine for concurrency.
 For loading images I use Coil with storage cache.
-For cache the api response I use room.
-There is a test for ViewModel.
+There are unit tests for ViewModel and UseCase.
 
 
 ## Tech Stack
@@ -20,5 +19,4 @@ There is a test for ViewModel.
 * Hilt (DI)
 * Retrofit (Network)
 * Coil (Image Loader)
-* Room (ORM)
 * Unit Test

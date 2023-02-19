@@ -3,20 +3,20 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav_graph"
-    app:startDestination="@id/imageListFragment">
+    app:startDestination="@id/objectListFragment">
 
     <fragment
-        android:id="@+id/imageListFragment"
-        android:name="com.ramonapp.pixabay.presentation.imagelist.ImageListFragment"
-        android:label="fragment_image_list"
-        tools:layout="@layout/fragment_image_list" >
+        android:id="@+id/objectListFragment"
+        android:name="com.ramonapp.metgallery.presentation.objectlist.ObjectListFragment"
+        android:label="objectListFragment"
+        tools:layout="@layout/fragment_object_list" >
+
         <action
-            android:id="@+id/action_imageListFragment_to_imageDetailFragment"
-            app:destination="@id/imageDetailFragment"
-            />
+            android:id="@+id/action_objectListFragment_to_objectDetailFragment"
+            app:destination="@id/objectDetailFragment" />
     </fragment>
     <fragment
-        android:id="@+id/imageDetailFragment"
-        android:name="com.ramonapp.pixabay.presentation.imagedetail.ImageDetailFragment"
-        android:label="ImageDetailFragment" />
+        android:id="@+id/objectDetailFragment"
+        android:name="com.ramonapp.metgallery.presentation.objectdetail.ObjectDetailFragment"
+        android:label="objectDetailFragment" />
 </navigation>

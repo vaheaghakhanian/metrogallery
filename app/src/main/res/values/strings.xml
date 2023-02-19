@@ -1,8 +1,18 @@
 <resources>
-    <string name="app_name">pixabay</string>
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="app_name">metgallery</string>
     <string name="thumbnail_image">Thumbnail Image</string>
-    <string name="search">search...</string>
+    <string name="search">search…</string>
     <string name="large_image">Large Image</string>
+    <string name="object_name_title">Object Name:  %s</string>
+    <string name="culture_title">Culture:  %s</string>
+    <string name="artist_title">Artist:  %s</string>
+    <string name="department_title">Department:  %s</string>
+    <string name="period_title">Period:  %s</string>
+
+    <!--Errors-->
+    <string name="client_error">Client Error.</string>
+    <string name="server_error">Server Error.</string>
+    <string name="network_error">Network Error.</string>
+    <string name="parse_error">Parse Error.</string>
+    <string name="unexpected_error">UnExpected Error.</string>
 </resources>
